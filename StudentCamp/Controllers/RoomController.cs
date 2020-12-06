@@ -11,6 +11,8 @@ using System.Threading.Tasks;
 
 namespace StudentCamp.Controllers
 {
+    [Route("api/[controller]")]
+    [ApiController]
     public class RoomController : Controller
     {
         private CampContext campContext;
@@ -48,48 +50,6 @@ namespace StudentCamp.Controllers
             {
                 // W razie niepowodzenia przy zapisie, wysyłanie informacji o błędzie
                 return Json(new { error = "Erros" }); ;
-            }
-        }
-
-        // GET: RoomController/Edit/5
-        public ActionResult Edit(int id)
-        {
-            return View();
-        }
-
-        // POST: RoomController/Edit/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-        // GET: RoomController/Delete/5
-        public ActionResult Delete(int id)
-        {
-            return View();
-        }
-
-        // POST: RoomController/Delete/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
             }
         }
     }
