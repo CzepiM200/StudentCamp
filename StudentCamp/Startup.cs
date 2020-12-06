@@ -51,6 +51,12 @@ namespace StudentCamp
             }
 
             app.UseHttpsRedirection();
+
+            app.UseCors(x => x
+                .AllowAnyOrigin()
+                .AllowAnyMethod()
+                .AllowAnyHeader());
+
             app.UseStaticFiles();
             app.UseSpaStaticFiles();
 
@@ -63,15 +69,15 @@ namespace StudentCamp
                     pattern: "{controller}/{action=Index}/{id?}");
             });
 
-            app.UseSpa(spa =>
-            {
-                spa.Options.SourcePath = "ClientApp";
+            //app.UseSpa(spa =>
+            //{
+            //    spa.Options.SourcePath = "ClientApp";
 
-                if (env.IsDevelopment())
-                {
-                    spa.UseReactDevelopmentServer(npmScript: "start");
-                }
-            });
+            //    //if (env.IsDevelopment())
+            //    //{
+            //    //    spa.UseReactDevelopmentServer(npmScript: "start");
+            //    //}
+            //});
         }
     }
 }
