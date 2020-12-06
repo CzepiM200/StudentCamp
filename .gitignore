@@ -231,3 +231,5 @@ _Pvt_Extensions
 
 # FAKE - F# Make
 .fake/
+.vs/StudentCamp/v16/.suo
+.vs/StudentCamp/v16/.suo
