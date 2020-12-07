@@ -3,6 +3,7 @@ import Navbar from './components/Navbar/Navbar';
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Rooms from './components/Rooms/Rooms';
 import Users from './components/Users/Users';
+import Payments from './components/Payments/Payments';
 
 function App() {
   return (
@@ -23,8 +24,8 @@ function App() {
             <Route path="/routes">
               
             </Route>
-            <Route path="/finances">
-              
+            <Route path="/payments">
+              <Payments />
             </Route>
           </Switch>
         </BrowserRouter> 

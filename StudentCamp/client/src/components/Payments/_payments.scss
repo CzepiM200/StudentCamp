@@ -1,0 +1,56 @@
+@import "../../scss/general.scss";
+
+.payments {
+  width: 1300px;
+  margin: 0 auto;
+  padding-top: 2em;
+  h2 {
+    margin: 0;
+  }
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .btn {
+      margin-left: 0.4em;
+    }
+    .card-header {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    .card {
+      width: 100%;
+      h4 {
+        margin: 0.2em;
+      }
+    }
+  }
+}
+
+.payments-add {
+  width: 1300px;
+  margin: 0 auto;
+  padding-top: 2em;
+  display: flex;
+  justify-content: center;
+  form {
+    width: 25em;
+    border: 1px solid $gray-400;
+    border-radius: 0.6em;
+    padding: 1em;
+    background-color: $gray-800;
+    legend {
+      padding-bottom: 0.2em;
+      border-bottom: 1px solid $gray-400;
+    }
+    label {
+      font-size: 1.22em;
+    }
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+}

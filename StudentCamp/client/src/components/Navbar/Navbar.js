@@ -31,8 +31,13 @@ const Navbar = (props) => {
             </Link>
         </li>
         <li className="nav-item">
+            <Link to="/payments" className="nav-link">
+                Przychodzy
+            </Link>
+        </li>
+        <li className="nav-item">
             <Link to="/finances" className="nav-link">
-                Finanse
+                Wydatki
             </Link>
         </li>
         </ul>
