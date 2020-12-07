@@ -15,7 +15,7 @@ const Navbar = (props) => {
 
     <div className="collapse navbar-collapse" id="navbarColor01">
         <ul className="navbar-nav mr-auto">
-        <li className="nav-item active">
+        <li className="nav-item">
             <Link to="/rooms" className="nav-link">
                 Rooms
             </Link>

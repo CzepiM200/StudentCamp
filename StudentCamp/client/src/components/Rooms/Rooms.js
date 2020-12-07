@@ -69,15 +69,20 @@ const fakeRooms = [
 const Rooms = (props) => {
   const [rooms, setRooms] = useState(fakeRooms);
 
-
   const generateRooms = () => {
     const cards = rooms.map((item, index) => {
       return(
         <div className="card border-primary mb-3">
           <div className="card-header">
             <h4 className="card-title">
-              Pokój numer {item.Number} ({item.BusySeatsNumber}/{item.SeatsNumber})
+              Pokój nr. {item.Number} - ({item.BusySeatsNumber}/{item.SeatsNumber})
             </h4>
+            <div>
+              <Link to="/rooms/edit" className="btn btn-primary">
+                Edytuj
+              </Link>
+              <button type="button" class="btn btn-danger">Usuń</button>
+            </div>
           </div>
           <div className="card-body">
               <h5 className="card-title">Lista mieszkańców:</h5>
@@ -91,11 +96,9 @@ const Rooms = (props) => {
     return cards;
   }
 
-
-  
   return (  
     <>
-      <Route path="/rooms">
+      <Route exact path="/rooms">
         <section className="rooms">
           <div className="card border-primary mb-3">
             <div className="card-header">
@@ -104,10 +107,49 @@ const Rooms = (props) => {
           </div>
           <article className="rooms__list">
             {generateRooms()}
+            <div className="card border-primary mb-3">
+              <div className="card-header">
+                <h4 className="card-title">
+                  Nowy pokój
+                </h4>
+                <div>
+                  <Link to="/rooms/add" className="btn btn-success">
+                    Dodaj
+                  </Link>
+                </div>
+              </div>
+            </div>
           </article>
         </section>      
       </Route>
       <Route exact path="/rooms/add">  
+        <section className="rooms-add">
+          <form>
+            <fieldset>
+              <legend>Dodawanie nowego pokoju</legend>
+              <div className="form-group">
+                <label>Numer pokoju</label>
+                <input type="number" className="form-control" min="1" placeholder="Numer pokoju"/>
+              </div>
+              <div className="form-group">
+                <label>Numer piętra</label>
+                <input type="number" className="form-control" min="0" placeholder="Numer piętra"/>
+              </div>
+              <div class="form-group">
+                <label>Płeć</label>
+                <select class="custom-select">
+                  <option value="K">Kobiety</option>
+                  <option value="M">Męrzczyźni</option>
+                </select>
+              </div>
+              <div className="form-group">
+                <label>Liczba miejsc</label>
+                <input type="number" className="form-control" min="1" placeholder="Liczba miejsc"/>
+              </div>
+              <button type="submit" className="btn btn-primary">Dodaj pokój</button>
+            </fieldset>
+          </form>
+        </section> 
       </Route>
       <Route exact path="/rooms/edit">  
       </Route>
