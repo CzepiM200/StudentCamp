@@ -2,6 +2,7 @@ import './App.css';
 import Navbar from './components/Navbar/Navbar';
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Rooms from './components/Rooms/Rooms';
+import Users from './components/Users/Users';
 
 function App() {
   return (
@@ -17,7 +18,7 @@ function App() {
               <Rooms />
             </Route>
             <Route path="/users">
-              
+              <Users />
             </Route>
             <Route path="/routes">
               

@@ -139,7 +139,7 @@ const Rooms = (props) => {
                 <label>Płeć</label>
                 <select class="custom-select">
                   <option value="K">Kobiety</option>
-                  <option value="M">Męrzczyźni</option>
+                  <option value="M">Mężczyźni</option>
                 </select>
               </div>
               <div className="form-group">
