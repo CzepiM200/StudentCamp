@@ -1,0 +1,21 @@
+@import "../../scss/general.scss";
+
+.rooms {
+  width: 1300px;
+  margin: 0 auto;
+  padding-top: 2em;
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .card {
+      width: 49%;
+      h4 {
+        margin: 0.2em;
+      }
+      h5 {
+        font-size: 1.5em;
+      }
+    }
+  }
+}

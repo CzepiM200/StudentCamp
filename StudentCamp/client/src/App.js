@@ -1,11 +1,33 @@
 import './App.css';
 import Navbar from './components/Navbar/Navbar';
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+import Rooms from './components/Rooms/Rooms';
 
 function App() {
   return (
     <div className="App">
-      <Navbar />
-    </div>
+      
+      <BrowserRouter>
+          <Navbar />
+          <Switch>
+            <Route exact path="/">
+              
+            </Route>
+            <Route path="/rooms">
+              <Rooms />
+            </Route>
+            <Route path="/users">
+              
+            </Route>
+            <Route path="/routes">
+              
+            </Route>
+            <Route path="/finances">
+              
+            </Route>
+          </Switch>
+        </BrowserRouter> 
+    </div> 
   );
 }
 
