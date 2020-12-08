@@ -4,6 +4,7 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Rooms from './components/Rooms/Rooms';
 import Users from './components/Users/Users';
 import Payments from './components/Payments/Payments';
+import Expenditures from './components/Expenditures/Expenditures';
 
 function App() {
   return (
@@ -26,6 +27,9 @@ function App() {
             </Route>
             <Route path="/payments">
               <Payments />
+            </Route>
+            <Route path="/expenditures">
+              <Expenditures/>
             </Route>
           </Switch>
         </BrowserRouter> 

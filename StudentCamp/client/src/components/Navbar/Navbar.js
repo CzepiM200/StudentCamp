@@ -36,7 +36,7 @@ const Navbar = (props) => {
             </Link>
         </li>
         <li className="nav-item">
-            <Link to="/finances" className="nav-link">
+            <Link to="/expenditures" className="nav-link">
                 Wydatki
             </Link>
         </li>
